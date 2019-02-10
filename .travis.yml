@@ -3,6 +3,10 @@ matrix:
   include:
     - os: osx
       compiler: clang
+      addons:
+        homebrew:
+          packages:
+            yasm
     - os: linux
       compiler: gcc
 
