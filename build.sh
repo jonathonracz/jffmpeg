@@ -12,5 +12,5 @@ if [ ${OSTYPE//[0-9.-]*/} == "msys" ]; then
 fi
 
 echo "Running configure with args $CONFIGURE_ARGS"
-configure $CONFIGURE_ARGS
+./configure $CONFIGURE_ARGS
 make
