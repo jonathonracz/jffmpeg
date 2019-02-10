@@ -15,7 +15,7 @@ matrix:
             yasm
     # Once Travis' Windows support gets fleshed out, use addons and other niceties.
     - os: windows
-      install: choco install yasm
+      install: choco install yasm msys2
 
 script:
   ./build.sh

@@ -9,7 +9,7 @@ CONFIGURE_ARGS="\
     --disable-avdevice --disable-swresample --disable-swscale --disable-postproc --disable-avfilter"
 
 if [ ${OSTYPE//[0-9.-]*/} == "msys" ]; then
-    msys2_shell.cmd -mingw64
+    msystem.bat MINGW64
 fi
 
 ./configure $CONFIGURE_ARGS
