@@ -13,6 +13,9 @@ matrix:
         apt:
           packages:
             yasm
+    # Once Travis' Windows support gets fleshed out, use addons and other niceties.
+    - os: windows
+      install: choco install yasm
 
 script:
   ./build.sh
