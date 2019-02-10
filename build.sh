@@ -8,8 +8,9 @@ CONFIGURE_ARGS="\
     --disable-avdevice --disable-swresample --disable-swscale --disable-postproc --disable-avfilter"
 
 if [ ${OSTYPE//[0-9.-]*/} == "msys" ]; then
-    WINDOWS_CONFIGURE_ARGS="--host-os=mingw64"
+    CONFIGURE_ARGS="$CONFIGURE_ARGS --host-os=mingw64"
 fi
 
-./configure $CONFIGURE_ARGS $WINDOWS_CONFIGURE_ARGS
+echo "Running configure with args $CONFIGURE_ARGS"
+configure $CONFIGURE_ARGS
 make
